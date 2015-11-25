@@ -1,0 +1,37 @@
+venv
+*.pyc
+.vagrant
+Vagrantfile
+
+
+# Installer logs
+pip-log.txt
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+__pycache__
+
+#Vagrant Boxes
+*.box
+
+.idea
