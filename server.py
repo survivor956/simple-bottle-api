@@ -6,7 +6,7 @@ from bottle import get, HTTPResponse
 
 
 @get('/')
-def vxlans():
+def home():
 	api = {"School": "ENISo",
 		    "University": "Soussa"}
 	return HTTPResponse(api,
