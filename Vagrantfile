@@ -12,10 +12,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "workshop"
 
+config.vm.provider "virtualbox" do |v|
+        v.memory = 1024
+        v.cpus = 1
+    end
+
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  #config.vm.box_url = "files.brianbirkinbine.com/vagrant-centos-65-i386-minimal.box"
-  config.vm.box_url = "vagrant-centos-65-i386-minimal.box"
+  #config.vm.box_url = "https://dl.dropboxusercontent.com/u/51478659/vagrant/morungos-centos67.box"
+  config.vm.box_url = "morungos-centos67.box"
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,

@@ -56,31 +56,37 @@ baseurl=http://downloads-distro.mongodb.org/repo/redhat/os/i686/
 gpgcheck=0
 enabled=1
 EOL""")
-    sudo("yum install -y mongodb mongodb-server")
+    sudo("yum install -y mongo-10gen mongo-10gen-server")
     sudo("service mongod start")
     sudo("chkconfig mongod on")
-    
+
+def open_firewall_port()
+    sudo(" iptables -I INPUT -p tcp --dport 1028 -s 10.0.2.2 -j ACCEPT")
+    sudo("/etc/init.d/iptables save")
+    sudo("/etc/init.d/iptables restart")
+ 
 # 
 #  Bootstrapping scripts
 # 
 
 def bootstrap(environment):
     #Install Redhat requirements
-    sudo("yum update -y")
-    sudo("/etc/init.d/vboxadd setup")
+    #sudo("yum update -y")
+    #sudo("/etc/init.d/vboxadd setup")
     package_str = " ".join(INSTALL_PACKAGES_CENTOS)
     sudo("rpm -ivh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm")#extra package required
     sudo("yum -y install "+package_str)
     sudo("pip install fabric fabtools virtualenv")
+    open_firewall_port()
 
 @roles('vagrant')
 def bootstrap_vagrant():
     env.warn_only = True
     vagrant()
     install_mongodb()
-    """bootstrap(environment="local")
+    bootstrap(environment="local")
     create_virtualenv(environment="local")
-    install_requirements(environment="local")"""
+    install_requirements(environment="local")
 
 def restart_supervisor():
     #TODO# Restart supervisor
