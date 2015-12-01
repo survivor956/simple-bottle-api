@@ -48,26 +48,39 @@ def install_requirements(environment):
             with prefix("source /home/vagrant/envs/{0}/bin/activate".format(env.project_name)):
                 run("pip install -r requirements.txt")
 
+def install_mongodb():
+    sudo("""cat >/etc/yum.repos.d/mongodb.repo <<EOL
+[mongodb]
+name=MongoDB Repository
+baseurl=http://downloads-distro.mongodb.org/repo/redhat/os/i686/
+gpgcheck=0
+enabled=1
+EOL""")
+    sudo("yum install -y mongodb mongodb-server")
+    sudo("service mongod start")
+    sudo("chkconfig mongod on")
+    
 # 
 #  Bootstrapping scripts
 # 
 
 def bootstrap(environment):
     #Install Redhat requirements
-    #sudo("yum update -y")
+    sudo("yum update -y")
+    sudo("/etc/init.d/vboxadd setup")
     package_str = " ".join(INSTALL_PACKAGES_CENTOS)
     sudo("rpm -ivh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm")#extra package required
-    #sudo("yum -y install "+package_str)
-    sudo("yum install -y git")
+    sudo("yum -y install "+package_str)
     sudo("pip install fabric fabtools virtualenv")
 
 @roles('vagrant')
 def bootstrap_vagrant():
     env.warn_only = True
     vagrant()
-    bootstrap(environment="local")
+    install_mongodb()
+    """bootstrap(environment="local")
     create_virtualenv(environment="local")
-    install_requirements(environment="local")
+    install_requirements(environment="local")"""
 
 def restart_supervisor():
     #TODO# Restart supervisor
