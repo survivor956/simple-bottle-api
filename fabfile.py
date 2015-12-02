@@ -60,7 +60,7 @@ EOL""")
     sudo("service mongod start")
     sudo("chkconfig mongod on")
 
-def open_firewall_port()
+def open_firewall_port():
     sudo(" iptables -I INPUT -p tcp --dport 1028 -s 10.0.2.2 -j ACCEPT")
     sudo("/etc/init.d/iptables save")
     sudo("/etc/init.d/iptables restart")

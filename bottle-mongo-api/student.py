@@ -39,6 +39,21 @@ def list_students():
     result = json.dumps(jstudents)
     return HTTPResponse(result,
 						content_type="application/json", status=200)
+
+@get('/student/:id')
+def get_student(id):
+    student = Student.objects.with_id(ObjectId(id))
+    if(student):
+        jstudent = {"id": str(student.id),
+                    "name": student.name,
+                    "last_name": student.last_name,
+                    "level": student.level,
+                    "specialty": student.specialty}
+        result = json.dumps(jstudent)
+    else:
+        return HTTPResponse("Student does not exist",
+                            content_type="application/json", status=404)
+    return HTTPResponse(result, content_type="application/json", status=200)
     
 @delete('/student/:id')
 def delete_student(id):
