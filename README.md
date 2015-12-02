@@ -13,9 +13,9 @@ If first time do these, otherwise jump to '4'
 2. ` git clone git@github.com:survivor956/simple-bottle-api.git`
 3. `sudo apt-get install python-pip`
 4. `pip install fabric fabtools`
-5. `cd bottle-mongo-api`
+5. `cd simple-bottle-api`
 6. If you want to reset:
-    `vagrant box remove workshop` 
+    `vagrant box remove workshop` and 
     `rm -rf .vagrant`
 7. `vagrant up`
 8. run `fab bootstrap_vagrant`
@@ -27,9 +27,9 @@ If first time do these, otherwise jump to '4'
 2. ` git clone git@github.com:survivor956/simple-bottle-api.git`
 3. `sudo yum install python-pip`
 4. `pip install fabric fabtools`
-5. `cd bottle-mongo-api`
+5. `cd simple-bottle-api`
 6. If you want to reset:
-    `vagrant box remove workshop` 
+    `vagrant box remove workshop` and 
     `rm -rf .vagrant`
 7. `vagrant up`
 8. run `fab bootstrap_vagrant`
@@ -50,7 +50,7 @@ If first time do these, otherwise jump to '4'
 7. ` git clone git@github.com:survivor956/simple-bottle-api.git`
 8. `sudo yum install python-pip`
 9. In cmd `pip install fabric fabtools`
-10. Open Git Bash and `cd bottle-mongo-api`
+10. Open Git Bash and `cd simple-bottle-api`
 11. If you want to reset: `vagrant box remove workshop` and 
     `rm -rf .vagrant`
 12. `vagrant up`
