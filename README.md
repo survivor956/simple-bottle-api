@@ -1,7 +1,7 @@
 # simple-bottle-api
 
 
-Installation:
+## Installation:
 ===================
 
 Please make sure that you have Vagrant and VirtualBox (Version earlier tha v5) installed before you run the following commands.
