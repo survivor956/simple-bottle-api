@@ -35,7 +35,7 @@ If first time do these, otherwise jump to '4'
 8. run `fab bootstrap_vagrant`
 
 ### For Windows hosts
-VirtualBox: download.virtualbox.org/virtualbox/4.3.34/VirtualBox-4.3.34-104062-Win.exe
+VirtualBox: http://download.virtualbox.org/virtualbox/4.3.34/VirtualBox-4.3.34-104062-Win.exe
 
 Vagrant: https://releases.hashicorp.com/vagrant/1.7.4/vagrant_1.7.4.msi
 
