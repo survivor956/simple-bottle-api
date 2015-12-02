@@ -14,11 +14,11 @@ If first time do these, otherwise jump to '4'
 3. `sudo apt-get install python-pip`
 4. `pip install fabric fabtools`
 5. `cd bottle-mongo-api`
-5. 1. If you want to reset:
+6. If you want to reset:
     `vagrant box remove workshop` 
     `rm -rf .vagrant`
-6. `vagrant up`
-7. run `fab bootstrap_vagrant`
+7. `vagrant up`
+8. run `fab bootstrap_vagrant`
 
 ### For Red Hat based hosts
 0. cd to the directory you want to install the project in
@@ -28,11 +28,11 @@ If first time do these, otherwise jump to '4'
 3. `sudo yum install python-pip`
 4. `pip install fabric fabtools`
 5. `cd bottle-mongo-api`
-5. 1. If you want to reset:
+6. If you want to reset:
     `vagrant box remove workshop` 
     `rm -rf .vagrant`
-6. `vagrant up`
-7. run `fab bootstrap_vagrant`
+7. `vagrant up`
+8. run `fab bootstrap_vagrant`
 
 ### For Windows hosts
 VirtualBox: download.virtualbox.org/virtualbox/4.3.34/VirtualBox-4.3.34-104062-Win.exe
@@ -51,8 +51,8 @@ If first time do these, otherwise jump to '4'
 8. `sudo yum install python-pip`
 9. In cmd `pip install fabric fabtools`
 10. Open Git Bash and `cd bottle-mongo-api`
-10. 1. If you want to reset:
+11. If you want to reset:
     `vagrant box remove workshop` 
     `rm -rf .vagrant`
-11. `vagrant up`
-12. run `fab bootstrap_vagrant`
+12. `vagrant up`
+13. run `fab bootstrap_vagrant`
