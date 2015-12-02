@@ -55,3 +55,9 @@ If first time do these, otherwise jump to '4'
     `rm -rf .vagrant`
 12. `vagrant up`
 13. run `fab bootstrap_vagrant`
+
+## Run the API SERVER:
+===================
+1. After `vagrant up` ssh to the Virtual Machine `vagrant ssh`
+2. `cd /vagrant/bottle-mongo-api/`
+2. `python server.py`
