@@ -52,8 +52,8 @@ If first time do these, otherwise jump to '4'
 9. In cmd `pip install fabric fabtools`
 10. Open Git Bash and `cd bottle-mongo-api`
 11. If you want to reset:
+
     `vagrant box remove workshop`
-    
     `rm -rf .vagrant`
     
 12. `vagrant up`
