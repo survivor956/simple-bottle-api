@@ -45,7 +45,7 @@ If first time do these, otherwise jump to '4'
 2. Install Python https://www.python.org/ftp/python/2.7.6/python-2.7.6.msi
 3. Add C:\Python27 path to environment variable
 4. Install visual c++ for python2.7: https://download.microsoft.com/download/7/9/6/796EF2E4-801B-4FC4-AB28-B59FBF6D907B/VCForPython27.msi
-5. Install Python-pip: in cmd do python -c "exec('try: from urllib2 import urlopen \nexcept: from urllib.request import urlopen');f=urlopen('https://bootstrap.pypa.io/get-pip.py').read();exec(f)"
+5. Install Python-pip: in cmd do {python -c "exec('try: from urllib2 import urlopen \nexcept: from urllib.request import urlopen');f=urlopen('https://bootstrap.pypa.io/get-pip.py').read();exec(f)"}
 6. Add C:\Python27\Scripts path to environment variable
 7. ` git clone git@github.com:survivor956/simple-bottle-api.git`
 8. `sudo yum install python-pip`
