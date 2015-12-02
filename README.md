@@ -48,7 +48,6 @@ If first time do these, otherwise jump to '4'
 5. Install Python-pip: in cmd do {python -c "exec('try: from urllib2 import urlopen \nexcept: from urllib.request import urlopen');f=urlopen('https://bootstrap.pypa.io/get-pip.py').read();exec(f)"}
 6. Add C:\Python27\Scripts path to environment variable
 7. ` git clone git@github.com:survivor956/simple-bottle-api.git`
-8. `sudo yum install python-pip`
 9. In cmd `pip install fabric fabtools`
 10. Open Git Bash and `cd simple-bottle-api`
 11. If you want to reset: `vagrant box remove workshop` and 
